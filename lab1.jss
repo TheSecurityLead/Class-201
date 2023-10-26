@@ -2,11 +2,20 @@
 
 //Greet User
 
+function greeting() {
 let userName = prompt("Welcome user! What is your name?");
 console.log(userName);
 alert("Welcome " + userName + ", this is my about me page.");
+return userName;
+}
+
+let userName = greeting();
+
 
 // Question: My name
+
+
+function myName() {
 alert("So my name is pretty long and unique. Can you guess what letter it starts with?");
 let nameChar = prompt("What do you think the first letter of my name is? You can write out the whole name if you like ;-)");
 nameChar = nameChar.toLowerCase();
@@ -17,8 +26,12 @@ if (nameChar == "s") {
  } else {
     alert("Sorry " + userName + ". That's not it. Try again!");
  }
+}
+
+myName();
 
  //Alpha-Numeric Test
+
 function isNumeric(str) {
     return /^[0-9]+$/.test(str);
 }
@@ -28,6 +41,9 @@ function isAlpha(str) {
 }
 
 //Question: My kids.
+
+
+function kidsNum() {
  let kidNum = prompt("Right. Now that we've got my name out of the way, how many kids do you think I've got? Btw it's single digit. Oh and numeric characters only.");
  if (console.log(isNumeric(kidNum)) != true) {
     alert("I said numbers only. C'mon you're better than that");
@@ -38,9 +54,14 @@ function isAlpha(str) {
  } else {
     alert("Spot on. I do have " + kidNum + " kids.");
  }
+}
+
+kidsNum();
 
  //Question: State of origin
 
+ 
+ function guessState() {
  let stateName = prompt("Okay" + userName + ". You've gotten this far. What state do you think I'm from? And please, only the two letter code.");
  
  stateName = stateName.toLowerCase();
@@ -52,3 +73,7 @@ function isAlpha(str) {
  } else if ((stateName.charAt(0) == 'n') && (stateName.charAt(1) == 'y')) {
     alert("That's right! I'm from the big apple!");
  }
+ }
+
+ guessState();
+ 
